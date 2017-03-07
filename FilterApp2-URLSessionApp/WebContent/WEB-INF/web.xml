@@ -1,0 +1,61 @@
+<web-app>
+   <servlet>
+       <servlet-name>first</servlet-name>
+	   <servlet-class>com.nt.servlet.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>first</servlet-name>
+		<url-pattern>/furl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>second</servlet-name>
+	  <servlet-class>com.nt.servlet.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>second</servlet-name>
+	  <url-pattern>/surl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>third</servlet-name>
+	   <servlet-class>com.nt.servlet.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>third</servlet-name>
+		<url-pattern>/turl</url-pattern>
+	</servlet-mapping>
+	 <session-config>
+	    <session-timeout>3</session-timeout>
+	 </session-config>
+	   <filter>
+	     <filter-name>browser</filter-name>
+	     <filter-class>com.nt.filter.CheckBrowserFilter</filter-class>
+	   </filter>
+	   <filter-mapping>
+	     <filter-name>browser</filter-name>
+	     <url-pattern>/*</url-pattern>
+	   </filter-mapping>
+	   
+     <filter>
+	     <filter-name>counter</filter-name>
+	     <filter-class>com.nt.filter.RequestCountFilter</filter-class>
+	   </filter>
+	   <filter-mapping>
+	     <filter-name>counter</filter-name>
+	     <url-pattern>/*</url-pattern>
+	   </filter-mapping>
+	   
+	   <filter>
+	     <filter-name>perfTest</filter-name>
+	     <filter-class>com.nt.filter.PerformanceTestFilter</filter-class>
+	   </filter>
+	   <filter-mapping>
+	     <filter-name>perfTest</filter-name>
+	     <url-pattern>/*</url-pattern>
+	   </filter-mapping> 
+	    
+	
+	<welcome-file-list>
+	   <welcome-file>personal.html </welcome-file>
+	 </welcome-file-list>
+</web-app>

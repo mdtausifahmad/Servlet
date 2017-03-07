@@ -1,0 +1,30 @@
+
+<web-app>
+<servlet>
+    <servlet-name>servlet2</servlet-name>
+     <jsp-file>/main.jsp</jsp-file>
+   </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet2</servlet-name>
+        <url-pattern>/srv2</url-pattern>
+    </servlet-mapping>
+    
+   <security-constraint>
+     <web-resource-collection>
+        <web-resource-name>r1</web-resource-name>
+        <url-pattern>/srv2</url-pattern>
+        <http-method>GET</http-method>
+   </web-resource-collection>
+   <auth-constraint>
+      <role-name>manager</role-name>
+   </auth-constraint>
+ </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <realm-name>myrealm</realm-name>
+       <form-login-config>
+           <form-login-page>/login.html</form-login-page>
+           <form-error-page>/login_fail.html</form-error-page>
+	    </form-login-config>
+	</login-config>
+</web-app>

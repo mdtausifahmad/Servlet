@@ -1,0 +1,32 @@
+<web-app>
+  <servlet>
+    <servlet-name>db</servlet-name>
+    <jsp-file>/db_jsp.jsp</jsp-file>
+     <init-param>
+       <param-name>driver</param-name>
+       <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+      <init-param>
+       <param-name>url</param-name>
+       <param-value>jdbc:mysql:///ntaj94db</param-value>
+    </init-param>
+      <init-param>
+       <param-name>dbuser</param-name>
+       <param-value>root</param-value>
+    </init-param>
+     <init-param>
+       <param-name>dbpwd</param-name>
+       <param-value>root</param-value>
+    </init-param>    
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>db</servlet-name>
+    <url-pattern>/dburl</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>input.html</welcome-file>
+  </welcome-file-list>
+</web-app>

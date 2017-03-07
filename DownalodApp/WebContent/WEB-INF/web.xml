@@ -1,0 +1,17 @@
+<web-app>
+
+  <servlet>
+    <servlet-name>DB</servlet-name>
+    <servlet-class>com.nt.servlet.DownloadServlet</servlet-class>
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DB</servlet-name>
+    <url-pattern>/downloadurl</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file> input.html</welcome-file>
+  </welcome-file-list>
+</web-app>
