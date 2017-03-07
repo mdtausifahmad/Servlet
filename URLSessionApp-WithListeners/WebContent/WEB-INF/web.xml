@@ -1,0 +1,40 @@
+<web-app>
+   <servlet>
+       <servlet-name>first</servlet-name>
+	   <servlet-class>com.nt.servlet.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>first</servlet-name>
+		<url-pattern>/furl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>second</servlet-name>
+	  <servlet-class>com.nt.servlet.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>second</servlet-name>
+	  <url-pattern>/surl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>third</servlet-name>
+	   <servlet-class>com.nt.servlet.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>third</servlet-name>
+		<url-pattern>/turl</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+	   <welcome-file>personal.html </welcome-file>
+	 </welcome-file-list>
+	 <listener>
+	    <listener-class>com.nt.listeners.ReqTimeAnalyzerListener</listener-class>
+	 </listener>
+	  <listener>
+	    <listener-class>com.nt.listeners.SessionDurationAnalyzerListener</listener-class>
+	 </listener>
+	   <listener>
+	    <listener-class>com.nt.listeners.WebAppMonitoringListener</listener-class>
+	 </listener>
+</web-app>

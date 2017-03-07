@@ -1,0 +1,24 @@
+
+<web-app>
+ <servlet>
+   <servlet-name>captcha</servlet-name>
+   <servlet-class>nl.captcha.servlet.StickyCaptchaServlet</servlet-class>
+      <init-param>
+             <param-name>captcha-width</param-name>
+             <param-value>100</param-value>
+         </init-param>
+         <init-param>
+             <param-name>captcha-height</param-name>
+             <param-value>100</param-value>
+         </init-param>
+         <init-param>
+             <param-name>ttl</param-name>
+             <param-value>9000</param-value>
+         </init-param>
+   
+ </servlet>  
+ <servlet-mapping>
+   <servlet-name>captcha</servlet-name>
+   <url-pattern>/stickyImage</url-pattern>
+ </servlet-mapping>
+</web-app>

@@ -1,0 +1,17 @@
+<web-app>
+
+   <servlet>
+    <servlet-name>reg</servlet-name>
+    <servlet-class>com.nt.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>reg</servlet-name>
+    <url-pattern>/reg</url-pattern>
+  </servlet-mapping>
+  
+<welcome-file-list>
+	<welcome-file>Home.html</welcome-file>
+</welcome-file-list>
+
+</web-app>

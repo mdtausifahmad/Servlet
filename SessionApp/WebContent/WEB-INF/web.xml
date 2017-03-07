@@ -1,0 +1,35 @@
+<web-app>
+   <servlet>
+       <servlet-name>first</servlet-name>
+	   <servlet-class>com.nt.FirstServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>first</servlet-name>
+		<url-pattern>/furl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+	  <servlet-name>second</servlet-name>
+	  <servlet-class>com.nt.SecondServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>second</servlet-name>
+	  <url-pattern>/surl</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+       <servlet-name>third</servlet-name>
+	   <servlet-class>com.nt.ThirdServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>third</servlet-name>
+		<url-pattern>/turl</url-pattern>
+	</servlet-mapping>
+	 <session-config>
+	    <session-timeout>3</session-timeout>
+	 </session-config>
+	
+	
+	<welcome-file-list>
+	   <welcome-file>personal.html </welcome-file>
+	 </welcome-file-list>
+</web-app>
