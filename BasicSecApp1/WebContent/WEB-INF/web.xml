@@ -1,0 +1,29 @@
+<web-app>
+    <servlet>
+        <servlet-name>servlet1</servlet-name>
+        <servlet-class>com.nt.servlet.FirstServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet1</servlet-name>
+        <url-pattern>/srv1</url-pattern>
+    </servlet-mapping>
+
+<security-constraint>
+   <web-resource-collection>
+      <web-resource-name>r1</web-resource-name>
+      <url-pattern>/srv1</url-pattern> <!-- we can write multiple url pattern tags -->
+      <http-method>GET</http-method> <!-- we can write http methods -->
+  </web-resource-collection>
+
+  <auth-constraint>
+   <role-name>manager</role-name>
+  </auth-constraint>
+
+</security-constraint>
+
+<login-config>
+   <auth-method>DIGEST</auth-method>
+   <realm-name>myrealm</realm-name>
+ </login-config>
+
+</web-app>
